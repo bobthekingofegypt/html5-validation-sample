@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>HTML5 validation playground</title>
+  <meta name="description" content="A whole load of forms and form components with validation and stuff">
+  <meta name="author" content="bob">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="navigation">
+    <div class="header">
+      <h1 class="brand-title">HTML5 Validation</h1>
+      <h2 class="brand-tagline">Testing various validation examples</h2>
+    </div>
+    <div>
+      <ul>
+        <li>
+          <a href="#simple-inputs">Simple inputs</a>
+        </li>
+        <li>
+          <a href="#simple-inputs-with-regex-pattern">Simple inputs with pattern</a>
+        </li>
+        <li>
+          <a href="#simple-inputs-with-types">Simple inputs with types</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content">
+    <div>
+      <section class="section">
+        <header class="section-header">
+          <h2 id="simple-inputs" class="section-title">Simple inputs</h2>
+        </header>
+        <div class="section-description">
+          <p>
+            A series of examples of basic form validation states
+          </p>
+          <div class="form">
+            <form>
+              <fieldset>
+                <div>
+                  <label for="name">Username</label>
+                  <input id="name" type="text" required placeholder="username">
+                  <span>required field</span>
+                </div>
+                <div>
+                  <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div class="form">
+            <form>
+              <fieldset>
+                <div>
+                  <label for="name">Username</label>
+                  <input id="name" type="text" required maxlength=5 placeholder="username">
+                  <span>maxlength=5 field</span>
+                </div>
+                <div>
+                  <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div class="form">
+            <form>
+              <fieldset>
+                <div>
+                  <label for="name">Username</label>
+                  <input id="name" type="text" required maxlength="5" placeholder="username">
+                  <span>maxlength="5" field</span>
+                </div>
+                <div>
+                  <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div class="form">
+            <form>
+              <fieldset>
+                <div>
+                  <label for="name">Username</label>
+                  <input id="name" type="text" required maxlength="adfa" placeholder="username">
+                  <span>maxlength="adfa" field</span>
+                </div>
+                <div>
+                  <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div class="form">
+            <form>
+              <fieldset>
+                <div>
+                  <label for="name">Username</label>
+                  <input id="name" type="text" required maxlength=adfa placeholder="username">
+                  <span>maxlength=adfa field</span>
+                </div>
+                <div>
+                  <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div class="form">
+            <form>
+              <fieldset>
+                <div>
+                  <label for="name">Username</label>
+                  <input id="name" type="text" required placeholder="username">
+                  <span>required field</span>
+                </div>
+                <div>
+                  <label for="password">Password</label>
+                  <input id="password" type="password" minlength=5 required placeholder="password">
+                  <span>required password minlength=5 field</span>
+                </div>
+
+                <div>
+                  <label for="email">Email Address</label>
+                  <input id="email" type="email" required placeholder="email...">
+                  <span>type=email field</span>
+                </div>
+                <div>
+                  <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <header class="section-header">
+          <h2 id="simple-inputs-with-regex-pattern" class="section-title">Inputs with regex pattern</h2>
+        </header>
+        <div class="section-description">
+          <p>
+            A series of text inputs with some custom regex patterns
+          </p>
+          <div class="form">
+            <form>
+              <fieldset>
+                <div>
+                  <label for="name">Username</label>
+                  <input id="name" type="text" required pattern="[A-Za-z]{5}" placeholder="required">
+                  <span>5 letter alphanumeric regexp</span>
+                </div>
+                <div>
+                  <button type="submit">Submit</button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <header class="section-header">
+          <h2 id="simple-inputs-with-types" class="section-title">Inputs with types</h2>
+        </header>
+        <div class="section-description">
+          <p>
+            A series of text inputs with some types set
+          </p>
+          <div class="form">
+            <form>
+              <fieldset>
+                <div>
+                  <label for="name">Email</label>
+                  <input id="name" type="email" required placeholder="required">
+                  <span>type=email</span>
+                </div>
+                <div>
+                  <button type="submit">Submit</button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div class="form">
+            <form>
+              <fieldset>
+                <div>
+                  <label for="name">Url</label>
+                  <input id="name" type="url" required placeholder="required">
+                  <span>type=url</span>
+                </div>
+                <div>
+                  <button type="submit">Submit</button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </div>   
+  </div>
+</body>
+</html>
