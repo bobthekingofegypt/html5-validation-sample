@@ -45,9 +45,11 @@
             <form>
               <fieldset>
                 <div>
-                  <label for="name">Username</label>
-                  <input id="name" type="text" required placeholder="username">
+                  <label for="simple-required">Username</label>
+                  <input id="simple-required" type="text" required placeholder="username">
                   <span>required field</span>
+                </div>
+                <div id="simple-required-message">
                 </div>
                 <div>
                   <button type="submit" class="pure-button pure-button-primary">Submit</button>
@@ -59,9 +61,11 @@
             <form>
               <fieldset>
                 <div>
-                  <label for="name">Username</label>
-                  <input id="name" type="text" required maxlength=5 placeholder="username">
+                  <label for="simple-maxlength">Username</label>
+                  <input id="simple-maxlength" type="text" required maxlength=5 placeholder="username">
                   <span>maxlength=5 field</span>
+                </div>
+                <div id="simple-maxlength-message">
                 </div>
                 <div>
                   <button type="submit" class="pure-button pure-button-primary">Submit</button>
@@ -231,5 +235,6 @@
 
     </div>   
   </div>
+  <script src="main.js"></script>
 </body>
 </html>
